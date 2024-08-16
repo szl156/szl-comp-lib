@@ -1,12 +1,29 @@
 {
-  "name": "szl-comp-lib",
+  "name": "@szl/szl-comp-lib",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "szl comp lib",
+  "main": "lib/szl-comp-lib.common.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:commonjs2": "webpack --config webpack.common.js",
+    "build:umd": "webpack --config webpack.umd.js",
+    "build": "npm run build:commonjs2 && npm run build:umd"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "组件库",
+    "szl"
+  ],
+  "author": "zlsheng",
+  "files": [
+    "lib",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szl156/szl-comp-lib.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
